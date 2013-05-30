@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains job definitions in schema version 2.0 format -->
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+
+  <schedule>
+
+    <job>
+      <name>SetKeywordsCostJob</name>
+      <group>SetKeywordsCostJobGroup</group>
+      <description>SetKeywordsCostJob</description>
+      <job-type>Quartz.Server.Jobs.SetKeywordsCostJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>SetKeywordsCostJobTriggerr</name>
+        <group>SetKeywordsCostJobTriggerrGroup</group>
+        <description>SetKeywordsCostJobTriggerr</description>
+        <job-name>SetKeywordsCostJob</job-name>
+        <job-group>SetKeywordsCostJobGroup</job-group>
+        <cron-expression>0 0 16 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+    <!--<job>
+      <name>smallbalancejob</name>
+      <group>smallbalanceGroup</group>
+      <description>smallbalancejob</description>
+      <job-type>Quartz.Server.Jobs.SmallBalanceJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>smallbalancejobTriggerr</name>
+        <group>smallbalanceTriggerrGroup</group>
+        <description>smallbalancejobTriggerr</description>
+        <job-name>smallbalancejob</job-name>
+        <job-group>smallbalanceGroup</job-group>
+        <cron-expression>0 0 */3 * * ?</cron-expression>
+      </cron>
+    </trigger>-->
+
+    <!--<job>
+      <name>RemoveMoneyJob</name>
+      <group>RemoveMoneyJobGroup</group>
+      <description>RemoveMoneyJob</description>
+      <job-type>Quartz.Server.Jobs.RemoveMoneyJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>sRemoveMoneyJobTriggerr</name>
+        <group>RemoveMoneyJobTriggerrGroup</group>
+        <description>RemoveMoneyJobTriggerr</description>
+        <job-name>RemoveMoneyJob</job-name>
+        <job-group>RemoveMoneyJobGroup</job-group>
+        <cron-expression>30 21 13 * * ?</cron-expression>
+      </cron>
+    </trigger>-->
+    
+   <!--<job>
+      <name>SetCallInfoJob</name>
+      <group>SetCallInfoJobGroup</group>
+      <description>SetCallInfoJob</description>
+      <job-type>Quartz.Server.Jobs.SetCallInfoJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>SetCallInfoJobTriggerr</name>
+        <group>SetCallInfoJobTriggerrGroup</group>
+        <description>SetCallInfoJobTriggerr</description>
+        <job-name>SetCallInfoJob</job-name>
+        <job-group>SetCallInfoJobGroup</job-group>
+        <cron-expression>0 */1 * * * ?</cron-expression>
+      </cron>
+    </trigger> -->
+
+  <!--<job>
+      <name>ReserveNumbersJob</name>
+      <group>ReserveNumbersJobGroup</group>
+      <description>ReserveNumbersJob</description>
+      <job-type>Quartz.Server.Jobs.ReserveNumbersJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+     </job>
+
+    <trigger>
+      <cron>
+        <name>ReserveNumbersJobTriggerr</name>
+        <group>ReserveNumbersJobTriggerrGroup</group>
+        <description>ReserveNumbersJobTriggerr</description>
+        <job-name>ReserveNumbersJob</job-name>
+        <job-group>ReserveNumbersJobGroup</job-group>
+        <cron-expression>0 */1 * * * ?</cron-expression>
+      </cron>
+    </trigger>
+
+ <job>
+      <name>SendEmailJob</name>
+      <group>SendEmailJobGroup</group>
+      <description>SendEmailJobJob</description>
+      <job-type>Quartz.Server.Jobs.SendEmailJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>SendEmailJobTriggerr</name>
+        <group>SendEmailJobTriggerrGroup</group>
+        <description>SendEmailJobTriggerr</description>
+        <job-name>SendEmailJob</job-name>
+        <job-group>SendEmailJobGroup</job-group>
+        <cron-expression>*/30 * * * * ?</cron-expression>
+      </cron>
+    </trigger> 
+
+     <job>
+      <name>RelieveNumbersJob</name>
+      <group>RelieveNumbersJobGroup</group>
+      <description>RelieveNumbersJob</description>
+      <job-type>Quartz.Server.Jobs.RelieveNumbersJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job> 
+
+    <trigger>
+      <cron>
+        <name>RelieveNumbersJobTriggerr</name>
+        <group>RelieveNumbersJobTriggerrGroup</group>
+        <description>RelieveNumbersJobTriggerr</description>
+        <job-name>RelieveNumbersJob</job-name>
+        <job-group>RelieveNumbersJobGroup</job-group>
+        <cron-expression>0 */6 * * * ?</cron-expression>
+      </cron>
+    </trigger>-->
+
+     <!--<job>
+      <name>VisitoirDeactivateJob</name>
+      <group>VisitoirDeactivateJobGroup</group>
+      <description>VisitoirDeactivateJob</description>
+      <job-type>Quartz.Server.Jobs.VisitoirDeactivateJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>VisitoirDeactivateJobTriggerr</name>
+        <group>VisitoirDeactivateJobTriggerrGroup</group>
+        <description>VisitoirDeactivateJobTriggerr</description>
+        <job-name>VisitoirDeactivateJob</job-name>
+        <job-group>VisitoirDeactivateJobGroup</job-group>
+        <cron-expression>*/30 * * * * ?</cron-expression>
+      </cron>
+    </trigger>-->  
+
+
+    <!--<job>
+      <name>GetGoogleAnalyticsDataJob</name>
+      <group>GetGoogleAnalyticsDataJobGroup</group>
+      <description>GetGoogleAnalyticsDataJob</description>
+      <job-type>Quartz.Server.Jobs.GetGoogleAnalyticsDataJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>GetGoogleAnalyticsDataJobTriggerr</name>
+        <group>GetGoogleAnalyticsDataJobTriggerrGroup</group>
+        <description>GetGoogleAnalyticsDataJobTriggerr</description>
+        <job-name>GetGoogleAnalyticsDataJob</job-name>
+        <job-group>GetGoogleAnalyticsDataJobGroup</job-group>
+        <cron-expression>0 42 9 * * ?</cron-expression>
+      </cron>
+    </trigger>-->
+
+   <!--<job>
+      <name>CollectNumbersStatisticJob</name>
+      <group>CollectNumbersStatisticJobGroup</group>
+      <description>CollectNumbersStatisticJob</description>
+      <job-type>Quartz.Server.Jobs.CollectNumbersStatisticJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>CollectNumbersStatisticJobTriggerr</name>
+        <group>CollectNumbersStatisticJobTriggerrGroup</group>
+        <description>CollectNumbersStatisticJobTriggerr</description>
+        <job-name>CollectNumbersStatisticJob</job-name>
+        <job-group>CollectNumbersStatisticJobGroup</job-group>
+        <cron-expression>*/30 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+
+    <job>
+      <name>NumbersNotEnoughMessageJob</name>
+      <group>NumbersNotEnoughMessageJobGroup</group>
+      <description>NumbersNotEnoughMessageJob</description>
+      <job-type>Quartz.Server.Jobs.NumbersNotEnoughMessageJob, CallTrackingJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+
+    <trigger>
+      <cron>
+        <name>NumbersNotEnoughMessageJobTriggerr</name>
+        <group>NumbersNotEnoughMessageJobTriggerrGroup</group>
+        <description>NumbersNotEnoughMessageJobTriggerr</description>
+        <job-name>NumbersNotEnoughMessageJob</job-name>
+        <job-group>NumbersNotEnoughMessageJobGroup</job-group>
+        <cron-expression>0 59 23 * * ?</cron-expression>
+      </cron>
+    </trigger>-->
+
+  </schedule>
+
+</job-scheduling-data>
